@@ -1,5 +1,6 @@
 body{
     background-color: aqua;
+    width: 90%;
 }
 
 h1{
@@ -10,10 +11,54 @@ h1{
     margin: 2rem;   
 }
 
-.timer{
-    float: right;
+#timer{
+    position: relative;
+    left: 82%;
+    bottom: 120px 
 }
-.highscore{
-    float: left;
+#highscore{
+
+   position: relative;
+    right: 1%
+}
+ 
+li{
+    padding: 0.2rem;
+    margin: 0.2rem;
+}
+
+.body1{
+    text-align: center;
+    margin-bottom: 100px;
+    border-style: solid;
+    border-width: 2px ;
+    padding: 1rem;
+    margin: 1rem;
+    font-size: 20px;
+    width: 90%;
+
+}
+
+#start-button{
+    position: relative;
+    text-align: center;
+    padding: 1rem;
+    margin: 1rem;
+    left: 45%;
+    background-color: rgb(6, 6, 78);
+    color: azure;
     
+}
+
+.btn { 
+    color: aliceblue;
+    font-weight: 400;
+    background-color: blue;
+    display: hide;
+    padding: .5rem;
+    margin: .5rem;
+}
+
+.end{
+    display: none;
 }
