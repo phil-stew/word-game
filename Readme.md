@@ -6,6 +6,8 @@ local stroge saves in the application.
 
 havent found away let it some on the highscore page..
 
-i couldnt get the high score to save 
- 
+i couldnt get the high score to save in local storage
+
+
+
  
