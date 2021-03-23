@@ -15,14 +15,6 @@ var timerInterval;
 timeStatus = document.getElementById("timer")
 
 
-function init() {
-    // Get stored todos from localStorage
-    localStorage.setItem('user', JSON.stringify(user));
-  
-    // If todos were retrieved from localStorage, update the todos array to it
-    if (storeScr !== null) {
-      highScore = storeScr;
-    }}
 
 
 const question =[
@@ -118,7 +110,7 @@ function nextQuestion(){
     var curq = question[index]
     questEl.textContent = curq.title
     curq.answer.forEach(answer => {
-        const button = document.createElement('button')
+        var button = document.createElement('button')
         button.textContent = answer.text
         button.classList.add('btn')
         button.addEventListener('click', answerSel)
@@ -128,7 +120,7 @@ function nextQuestion(){
 
 
 function answerSel(){
-    if(element.matches("button") === false){
+    if(answerE.matches("btn") !== true){
         timeCounter -= 10;
     }
     index++
@@ -147,7 +139,7 @@ function quizEnd(){
     endGame.style.display = 'block'
       
      storeScr()
-
+    addUser()
      
       }
 
@@ -165,6 +157,7 @@ function quizEnd(){
                 Score: score1,  
             };
             localStorage.setItem('user', JSON.stringify(user));
+           
         }}
    
 
@@ -200,7 +193,7 @@ function setTime() {
  startButton.addEventListener("click", startQuiz);
 
 
-init()
+
 
   
 
