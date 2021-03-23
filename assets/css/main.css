@@ -62,3 +62,15 @@ li{
 .end{
     display: none;
 }
+
+#end1{
+    position: relative;
+    text-align: center;
+    font-weight: bold;
+    font-size: 20pt;
+    justify-content: center;
+    border-style: dashed;
+    background-color: aliceblue;
+    box-shadow: 5pt;
+    width: fit-content;
+}

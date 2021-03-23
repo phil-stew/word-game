@@ -1,6 +1,6 @@
 const startButton = document.getElementById("start-button")
 var questEl = document.getElementById('test')
-const answerEl = document.getElementById('answer')
+const answerEl = document.getElementById('end1')
 const answerE = document.getElementById('test')
 const highScore = document.getElementById('highscore')
 const endGame= document.getElementById('end1') 
@@ -11,7 +11,18 @@ var wrong = 0
 var  index = 0
 var timerInterval;
 
+
 timeStatus = document.getElementById("timer")
+
+
+function init() {
+    // Get stored todos from localStorage
+    localStorage.setItem('user', JSON.stringify(user));
+  
+    // If todos were retrieved from localStorage, update the todos array to it
+    if (storeScr !== null) {
+      highScore = storeScr;
+    }}
 
 
 const question =[
@@ -117,7 +128,7 @@ function nextQuestion(){
 
 
 function answerSel(){
-    if(this.value !== question[index].check ){
+    if(element.matches("button") === false){
         timeCounter -= 10;
     }
     index++
@@ -134,13 +145,28 @@ function quizEnd(){
     clearInterval(timerInterval);
     questEl.style.display = 'none'
     endGame.style.display = 'block'
-    var score1 = 200 - timeCounter
-    var score2 = 200 - score1
-    highScore.textContent = " Your score is " + score2
-    startButton.style.display = 'block'
-   
-}
+      
+     storeScr()
 
+     
+      }
+
+
+
+      function storeScr() {
+        var score = 200 - timeCounter
+        var score1 = 200 - score
+       var person = prompt("Please enter your name")
+        if(person != null){
+            answerEl.textContent = "hello " + person + " your score is " + score1   
+            
+            var user = { 
+                Player: person,
+                Score: score1,  
+            };
+            localStorage.setItem('user', JSON.stringify(user));
+        }}
+   
 
 
 
@@ -166,12 +192,15 @@ function setTime() {
     
     }
 
+
+   
+ 
   
 
  startButton.addEventListener("click", startQuiz);
 
 
-
+init()
 
   
 
