@@ -13,8 +13,9 @@ h1{
 
 #timer{
     position: relative;
-    left: 82%;
-    bottom: 120px 
+    bottom: 120px;
+    left: 80%;
+
 }
 #highscore{
 
@@ -51,6 +52,7 @@ li{
 }
 
 .btn { 
+    justify-content: flex-end;
     color: aliceblue;
     font-weight: 400;
     background-color: blue;

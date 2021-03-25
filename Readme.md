@@ -9,5 +9,9 @@ havent found away let it some on the highscore page..
 i couldnt get the high score to save in local storage
 
 
+[these are my page deployed](assets\images\dis1.jpg)
 
- 
+[these are my page deployed](assets\images\dis2.jpg)
+
+[these are my page deployed](assets\images\dis3.jpg)
+
