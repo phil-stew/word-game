@@ -113,7 +113,7 @@ function nextQuestion(){
     curq.answer.forEach(answer => {
         var button = document.createElement('button')
         button.textContent = answer.text
-        button.classList.add('btn')
+        button.classList.add('btn', 'mb-3')
         button.addEventListener('click', answerSel)
         answerE.appendChild(button)
     }) 
@@ -140,7 +140,7 @@ function quizEnd(){
     endGame.style.display = 'block'
       
      storeScr()
-    addUser()
+  
      
       }
 
